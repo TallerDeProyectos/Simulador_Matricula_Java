@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name="nose" action="simulacionhorario" method="post">
+<form name="nose" action="simulacionhorario" method="get">
   <input type="submit" name="button" id="button" value="Submit">
 </form>
 </body>
