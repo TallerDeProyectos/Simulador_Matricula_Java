@@ -1,6 +1,6 @@
 package eregistro.control;
 
-import java.io.IOException;
+import java.io.IOException; 
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,6 +42,7 @@ public class SimulacionHorarioServlet extends HttpServlet {
 			Statement st=con.createStatement();
 			ResultSet rs=st.executeQuery(sql);
 			while(rs.next()){
+				System.out.print("entro");
 				
 				Alumno alumno = new Alumno();
 				alumno.setID_Alumno(rs.getInt("ID_Alumno"));
