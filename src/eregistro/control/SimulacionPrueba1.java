@@ -179,6 +179,7 @@ public class SimulacionPrueba1 extends HttpServlet {
 		request.setAttribute("grupo2",  grupo2);
 		request.setAttribute("grupo3",  grupo3);
 		request.setAttribute("grupo4",  grupo4);
+		request.setAttribute("grupo5",  grupo5);
 		request.getRequestDispatcher("simular2.jsp").
 		forward(request, response);
 	}
