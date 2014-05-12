@@ -49,23 +49,23 @@ public class SimulacionPrueba1 extends HttpServlet {
 			
 			
 			Class.forName("com.mysql.jdbc.Driver");
-			System.out.print("entro1");
+			
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb",
 					"root", "root");
-			System.out.print("entro2");
+			
 			//String sql="select Promedio from T_SemestrexAlumno";
-			System.out.print("entro3");
+			
 			String sql1="select a.id_alumno, a.nombre,a.apellido_paterno,a.apellido_materno,a.semestre_ingreso,a.nro_cre_aprobados,b.promedio from t_alumno a,t_semestrexalumno b where a.id_alumno=b.id_alumno";
-			System.out.print("entro4");
+			
 			Statement st=con.createStatement();
-			System.out.print("entro5");
+			
 			//ResultSet rs=st.executeQuery(sql);
-			System.out.print("entro6");
+	
 			ResultSet rs2=st.executeQuery(sql1);
 			
 			System.out.print("entro7");
 			while(rs2.next()){
-				System.out.print("entro6");
+				
 			
 				if(rs2.getDouble("promedio")>=13.28 && rs2.getDouble("promedio")<=20){
 					
