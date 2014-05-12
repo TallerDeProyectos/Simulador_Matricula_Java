@@ -8,7 +8,7 @@
 </head>
 <body>
 <form name="nose" action="SimPrueba1" method="get">
-  <input type="submit" name="button" id="button" value="simular">
+  <input type="submit" name="button" id="button" value="simularr">
 </form>
 </body>
 </html>
