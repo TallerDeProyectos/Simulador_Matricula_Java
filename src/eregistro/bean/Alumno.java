@@ -2,30 +2,30 @@ package eregistro.bean;
 
 public class Alumno {
 	private int ID_Alumno;
-	private String Nombre, Apellido_Paterno, Apellido_Materno,semestre_ingreso,nro_cre_aprobados;
+	private String Nombre, Apellido_Paterno, Apellido_Materno,Semestre_Ingreso,Nro_Cre_Aprobados;
 	private char Estado;
-	private double promedio;
+	private double Promedio;
 	
 	public double getPromedio() {
-		return promedio;
+		return Promedio;
 	}
 	public void setPromedio(double promedio) {
-		this.promedio = promedio;
+		this.Promedio = promedio;
 	}
 	public int getID_Alumno() {
 		return ID_Alumno;
 	}
 	public String getSemestre_ingreso() {
-		return semestre_ingreso;
+		return Semestre_Ingreso;
 	}
 	public void setSemestre_ingreso(String semestre_ingreso) {
-		this.semestre_ingreso = semestre_ingreso;
+		this.Semestre_Ingreso = semestre_ingreso;
 	}
 	public String getNro_cre_aprobados() {
-		return nro_cre_aprobados;
+		return Nro_Cre_Aprobados;
 	}
 	public void setNro_cre_aprobados(String nro_cre_aprobados) {
-		this.nro_cre_aprobados = nro_cre_aprobados;
+		this.Nro_Cre_Aprobados = nro_cre_aprobados;
 	}
 	public void setID_Alumno(int iD_Alumno) {
 		ID_Alumno = iD_Alumno;
