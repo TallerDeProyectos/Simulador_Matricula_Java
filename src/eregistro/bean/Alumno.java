@@ -1,34 +1,21 @@
 package eregistro.bean;
 
 public class Alumno {
-	private int ID_Alumno;
-	private String Nombre, Apellido_Paterno, Apellido_Materno,Semestre_Ingreso,Nro_Cre_Aprobados;
-	private char Estado;
+	private int ID_Alumno, Ciclo, ID_Curso;
+	private String Nombre, Apellido_Paterno, Apellido_Materno, Nro_Cre_Aprobados;
 	private double Promedio;
 	
-	public double getPromedio() {
-		return Promedio;
-	}
-	public void setPromedio(double promedio) {
-		this.Promedio = promedio;
-	}
 	public int getID_Alumno() {
 		return ID_Alumno;
 	}
-	public String getSemestre_ingreso() {
-		return Semestre_Ingreso;
-	}
-	public void setSemestre_ingreso(String semestre_ingreso) {
-		this.Semestre_Ingreso = semestre_ingreso;
-	}
-	public String getNro_cre_aprobados() {
-		return Nro_Cre_Aprobados;
-	}
-	public void setNro_cre_aprobados(String nro_cre_aprobados) {
-		this.Nro_Cre_Aprobados = nro_cre_aprobados;
-	}
 	public void setID_Alumno(int iD_Alumno) {
 		ID_Alumno = iD_Alumno;
+	}
+	public int getCiclo() {
+		return Ciclo;
+	}
+	public void setCiclo(int ciclo) {
+		Ciclo = ciclo;
 	}
 	public String getNombre() {
 		return Nombre;
@@ -48,11 +35,25 @@ public class Alumno {
 	public void setApellido_Materno(String apellido_Materno) {
 		Apellido_Materno = apellido_Materno;
 	}
-	public char getEstado() {
-		return Estado;
+	public String getNro_Cre_Aprobados() {
+		return Nro_Cre_Aprobados;
 	}
-	public void setEstado(char estado) {
-		Estado = estado;
+	public void setNro_Cre_Aprobados(String nro_Cre_Aprobados) {
+		Nro_Cre_Aprobados = nro_Cre_Aprobados;
 	}
+	public double getPromedio() {
+		return Promedio;
+	}
+	public void setPromedio(double promedio) {
+		Promedio = promedio;
+	}
+	public int getID_Curso() {
+		return ID_Curso;
+	}
+	public void setID_Curso(int iD_Curso) {
+		ID_Curso = iD_Curso;
+	}
+	
+	
 	
 }

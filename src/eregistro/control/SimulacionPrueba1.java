@@ -37,12 +37,13 @@ public class SimulacionPrueba1 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		List<Alumno> grupo1 =  new ArrayList<Alumno>();
 		List<Alumno> grupo2 =  new ArrayList<Alumno>();
 		List<Alumno> grupo3 =  new ArrayList<Alumno>();
 		List<Alumno> grupo4 =  new ArrayList<Alumno>();
 		List<Alumno> grupo5 =  new ArrayList<Alumno>();
+		
 		Connection con=null;
 		
 		try{
@@ -53,31 +54,32 @@ public class SimulacionPrueba1 extends HttpServlet {
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb",
 					"root", "root");
 			
-			//String sql="select Promedio from T_SemestrexAlumno";
 			
-			String sql1="select a.id_alumno, a.nombre,a.apellido_paterno,a.apellido_materno,a.semestre_ingreso,a.nro_cre_aprobados,b.promedio from t_alumno a,t_semestrexalumno b where a.id_alumno=b.id_alumno";
+			String sql1="select a.id_alumno, a.nombre,a.apellido_paterno,a.apellido_materno,a.nro_cre_aprobados,b.promedio,d.id_curso from t_alumno a,t_semestrexalumno b,t_cursos c,t_cursoshabiles d where a.id_alumno=b.id_alumno and  a.id_alumno=d.id_alumno and d.id_curso=c.id_curso";
+				
 			
 			Statement st=con.createStatement();
-			
-			//ResultSet rs=st.executeQuery(sql);
 	
 			ResultSet rs2=st.executeQuery(sql1);
 			
-			System.out.print("entro7");
+			
 			while(rs2.next()){
+				Alumno alumno=new Alumno();
+				
 				
 			
 				if(rs2.getDouble("promedio")>=13.28 && rs2.getDouble("promedio")<=20){
 					
 					
-					Alumno alumno=new Alumno();
+					
 					
 					alumno.setID_Alumno(rs2.getInt("ID_Alumno"));
 					alumno.setNombre(rs2.getString("Nombre"));
 					alumno.setApellido_Paterno(rs2.getString("Apellido_Paterno"));
 					alumno.setApellido_Materno(rs2.getString("Apellido_Materno"));
-					alumno.setNro_cre_aprobados(rs2.getString("Nro_cre_aprobados"));
+					alumno.setNro_Cre_Aprobados(rs2.getString("Nro_cre_aprobados"));
 					alumno.setPromedio(rs2.getDouble("promedio"));
+					alumno.setID_Curso(rs2.getInt("ID_Curso"));
 					
 					grupo1.add(alumno);
 					
@@ -86,16 +88,16 @@ public class SimulacionPrueba1 extends HttpServlet {
 				}else{
 					if(rs2.getDouble("promedio")>=12.3 && rs2.getDouble("promedio")<=13.27){
 						
-						Alumno alumno=new Alumno();
+						
 						
 						
 						alumno.setID_Alumno(rs2.getInt("ID_Alumno"));
 						alumno.setNombre(rs2.getString("Nombre"));
 						alumno.setApellido_Paterno(rs2.getString("Apellido_Paterno"));
 						alumno.setApellido_Materno(rs2.getString("Apellido_Materno"));
-						alumno.setNro_cre_aprobados(rs2.getString("Nro_cre_aprobados"));
+						alumno.setNro_Cre_Aprobados(rs2.getString("Nro_cre_aprobados"));
 						alumno.setPromedio(rs2.getDouble("promedio"));
-						
+						alumno.setID_Curso(rs2.getInt("ID_Curso"));
 						grupo2.add(alumno);
 						
 						
@@ -103,16 +105,16 @@ public class SimulacionPrueba1 extends HttpServlet {
 					}else{
 						if(rs2.getDouble("promedio")>=11.0 && rs2.getDouble("promedio")<=12.12){
 							
-							Alumno alumno=new Alumno();
+							
 							
 							
 							alumno.setID_Alumno(rs2.getInt("ID_Alumno"));
 							alumno.setNombre(rs2.getString("Nombre"));
 							alumno.setApellido_Paterno(rs2.getString("Apellido_Paterno"));
 							alumno.setApellido_Materno(rs2.getString("Apellido_Materno"));
-							alumno.setNro_cre_aprobados(rs2.getString("Nro_cre_aprobados"));
+							alumno.setNro_Cre_Aprobados(rs2.getString("Nro_cre_aprobados"));
 							alumno.setPromedio(rs2.getDouble("promedio"));
-							
+							alumno.setID_Curso(rs2.getInt("ID_Curso"));
 							grupo3.add(alumno);
 							
 							
@@ -120,16 +122,16 @@ public class SimulacionPrueba1 extends HttpServlet {
 							
 							if(rs2.getDouble("promedio")>=9.09 && rs2.getDouble("promedio")<=10.99){
 								
-								Alumno alumno=new Alumno();
+								
 								
 								
 								alumno.setID_Alumno(rs2.getInt("ID_Alumno"));
 								alumno.setNombre(rs2.getString("Nombre"));
 								alumno.setApellido_Paterno(rs2.getString("Apellido_Paterno"));
 								alumno.setApellido_Materno(rs2.getString("Apellido_Materno"));
-								alumno.setNro_cre_aprobados(rs2.getString("Nro_cre_aprobados"));
+								alumno.setNro_Cre_Aprobados(rs2.getString("Nro_cre_aprobados"));
 								alumno.setPromedio(rs2.getDouble("promedio"));
-								
+								alumno.setID_Curso(rs2.getInt("ID_Curso"));
 								grupo4.add(alumno);
 								
 								
@@ -137,16 +139,16 @@ public class SimulacionPrueba1 extends HttpServlet {
 								
 								
 								if(rs2.getDouble("promedio")>=0.0 && rs2.getDouble("promedio")<=9.09){
-									Alumno alumno=new Alumno();
+									
 									
 									
 									alumno.setID_Alumno(rs2.getInt("ID_Alumno"));
 									alumno.setNombre(rs2.getString("Nombre"));
 									alumno.setApellido_Paterno(rs2.getString("Apellido_Paterno"));
 									alumno.setApellido_Materno(rs2.getString("Apellido_Materno"));
-									alumno.setNro_cre_aprobados(rs2.getString("Nro_cre_aprobados"));
+									alumno.setNro_Cre_Aprobados(rs2.getString("Nro_cre_aprobados"));
 									alumno.setPromedio(rs2.getDouble("promedio"));
-									
+									alumno.setID_Curso(rs2.getInt("ID_Curso"));
 									grupo5.add(alumno);
 									
 								

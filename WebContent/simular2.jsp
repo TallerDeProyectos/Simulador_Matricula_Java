@@ -19,6 +19,7 @@ Grupo 1
     <td>Apellido Materno</td>
      <td>Nro_cre_aprobados</td>
       <td>Promedio</td>
+      <td>Cursos</td>
   </tr>
   <% if(grupo1 !=null && grupo1 .size()>0){
 	   for(Alumno alumno : grupo1){%>
@@ -27,8 +28,9 @@ Grupo 1
     <td><%=alumno.getNombre()%></td>
     <td><%=alumno.getApellido_Paterno()%></td>
     <td><%=alumno.getApellido_Materno()%></td>
-    <td><%=alumno.getNro_cre_aprobados()%></td>
+    <td><%=alumno.getNro_Cre_Aprobados()%></td>
     <td><%=alumno.getPromedio()%></td>
+    <td><%=alumno.getID_Curso()%></td>
   </tr>
    <% }
      }else{%>
@@ -50,6 +52,7 @@ Grupo 2
     <td>Apellido Materno</td>
      <td>Nro_cre_aprobados</td>
       <td>Promedio</td>
+      <td>Cursos</td>
   </tr>
   <% if(grupo2 !=null && grupo2 .size()>0){
 	   for(Alumno alumno : grupo2){%>
@@ -58,8 +61,10 @@ Grupo 2
     <td><%=alumno.getNombre()%></td>
     <td><%=alumno.getApellido_Paterno()%></td>
     <td><%=alumno.getApellido_Materno()%></td>
-    <td><%=alumno.getNro_cre_aprobados()%></td>
+    <td><%=alumno.getNro_Cre_Aprobados()%></td>
     <td><%=alumno.getPromedio()%></td>
+   <td><%=alumno.getID_Curso()%></td>
+    
   </tr>
    <% }
      }else{%>
@@ -84,6 +89,7 @@ Grupo 3
     <td>Apellido Materno</td>
      <td>Nro_cre_aprobados</td>
       <td>Promedio</td>
+      <td>Cursos</td>
   </tr>
   <% if(grupo3 !=null && grupo3 .size()>0){
 	   for(Alumno alumno : grupo3){%>
@@ -92,8 +98,10 @@ Grupo 3
     <td><%=alumno.getNombre()%></td>
     <td><%=alumno.getApellido_Paterno()%></td>
     <td><%=alumno.getApellido_Materno()%></td>
-    <td><%=alumno.getNro_cre_aprobados()%></td>
+    <td><%=alumno.getNro_Cre_Aprobados()%></td>
     <td><%=alumno.getPromedio()%></td>
+    <td><%=alumno.getID_Curso()%></td>
+    
   </tr>
    <% }
      }else{%>
@@ -116,6 +124,7 @@ Grupo 4
     <td>Apellido Materno</td>
      <td>Nro_cre_aprobados</td>
       <td>Promedio</td>
+      <td>Cursos</td>
   </tr>
   <% if(grupo4 !=null && grupo4 .size()>0){
 	   for(Alumno alumno : grupo4){%>
@@ -124,8 +133,9 @@ Grupo 4
     <td><%=alumno.getNombre()%></td>
     <td><%=alumno.getApellido_Paterno()%></td>
     <td><%=alumno.getApellido_Materno()%></td>
-    <td><%=alumno.getNro_cre_aprobados()%></td>
+    <td><%=alumno.getNro_Cre_Aprobados()%></td>
     <td><%=alumno.getPromedio()%></td>
+ <td><%=alumno.getID_Curso()%></td>
   </tr>
    <% }
      }else{%>
@@ -148,6 +158,7 @@ Grupo 5
     <td>Apellido Materno</td>
      <td>Nro_cre_aprobados</td>
       <td>Promedio</td>
+      <td>Cursos</td>
   </tr>
   <% if(grupo5 !=null && grupo5 .size()>0){
 	   for(Alumno alumno : grupo5){%>
@@ -156,8 +167,9 @@ Grupo 5
     <td><%=alumno.getNombre()%></td>
     <td><%=alumno.getApellido_Paterno()%></td>
     <td><%=alumno.getApellido_Materno()%></td>
-    <td><%=alumno.getNro_cre_aprobados()%></td>
+    <td><%=alumno.getNro_Cre_Aprobados()%></td>
     <td><%=alumno.getPromedio()%></td>
+  <td><%=alumno.getID_Curso()%></td>
   </tr>
    <% }
      }else{%>
