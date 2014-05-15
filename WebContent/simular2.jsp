@@ -7,16 +7,17 @@
 <html>
 
 <head>
-<script type="text/javascript" src="js/jquery-1.10.2.js"></script> 
-<script type="text/javascript" src="js/tablesorter.js"></script> 
-
-<script>
-  $(document).ready(function() 
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<link href="css/styletable.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+$(document).ready(function() 
     { 
         $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
     } 
-); 
-  </script>
+);
+</script> 
+
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
@@ -24,17 +25,19 @@
 <body>
 <% List<Alumno> grupo1 = (List<Alumno>)request.getAttribute("grupo1"); %>
 <table width="200" border="1" id="myTable" class="tablesorter">
-Grupo 1
+Lunes
+<thead>
   <tr>
-    <td>Codigo</td>
-    <td>Nombre</td>
-    <td>Apellido Paterno</td>
-    <td>Apellido Materno</td>
-     <td>Creditos Aprobados</td>
-      <td>Promedio</td>
-      <td>Cursos</td>
-      <td>Seccion</td>
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+     <th>Creditos Aprobados</th>
+      <th>Promedio</th>
+      <th>Cursos</th>
+      <th>Seccion</th>
   </tr>
+  </thead>
   <% if(grupo1 !=null && grupo1 .size()>0){
 	   for(Alumno alumno : grupo1){%>
   <tr>
@@ -50,7 +53,7 @@ Grupo 1
    <% }
      }else{%>
       <tr>
-    <td colspan="8"><div align="center" class="style1">No existen registros </div></td>
+    <td colspan="8"><div align="center">No existen registros </div></td>
   </tr>
     <% }	  
    %>
@@ -59,7 +62,8 @@ Grupo 1
 
 <% List<Alumno> grupo2 = (List<Alumno>)request.getAttribute("grupo2"); %>
 <table width="200" border="1" id="myTable" class="tablesorter">
-Grupo 2
+Martes
+<thead>
   <tr>
     <th>Codigo</th>
     <th>Nombre</th>
@@ -70,6 +74,7 @@ Grupo 2
       <th>Cursos</th>
       <th>Seccion</th>
   </tr>
+  </thead>
   <% if(grupo2 !=null && grupo2 .size()>0){
 	   for(Alumno alumno : grupo2){%>
   <tr>
@@ -86,7 +91,7 @@ Grupo 2
    <% }
      }else{%>
       <tr>
-    <td colspan="8"><div align="center" class="style1">No existen registros </div></td>
+    <td colspan="8"><div align="center">No existen registros </div></td>
   </tr>
     <% }	  
    %>
@@ -98,18 +103,20 @@ Grupo 2
 
 <% List<Alumno> grupo3 = (List<Alumno>)request.getAttribute("grupo3"); %>
 <table width="200" border="1" id="myTable" class="tablesorter">
-Grupo 3
+Miercoles
+<thead>
   <tr>
-    <td>Codigo</td>
-    <td>Nombre</td>
-    <td>Apellido Paterno</td>
-    <td>Apellido Materno</td>
-     <td>Creditos Aprobados</td>
-      <td>Promedio</td>
-      <td>Cursos</td>
-      <td>Seccion</td>
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+     <th>Creditos Aprobados</th>
+      <th>Promedio</th>
+      <th>Cursos</th>
+      <th>Seccion</th>
       
   </tr>
+  </thead>
   <% if(grupo3 !=null && grupo3 .size()>0){
 	   for(Alumno alumno : grupo3){%>
   <tr>
@@ -126,7 +133,7 @@ Grupo 3
    <% }
      }else{%>
       <tr>
-    <td colspan="8"><div align="center" class="style1">No existen registros </div></td>
+    <td colspan="8"><div align="center">No existen registros </div></td>
   </tr>
     <% }	  
    %>
@@ -136,17 +143,19 @@ Grupo 3
 
 <% List<Alumno> grupo4 = (List<Alumno>)request.getAttribute("grupo4"); %>
 <table width="200" border="1" id="myTable" class="tablesorter">
-Grupo 4
+Jueves
+<thead>
   <tr>
-    <td>Codigo</td>
-    <td>Nombre</td>
-    <td>Apellido Paterno</td>
-    <td>Apellido Materno</td>
-     <td>Creditos Aprobados</td>
-      <td>Promedio</td>
-      <td>Cursos</td>
-      <td>Seccion</td>
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+     <th>Creditos Aprobados</th>
+      <th>Promedio</th>
+      <th>Cursos</th>
+      <th>Seccion</th>
   </tr>
+  </thead>
   <% if(grupo4 !=null && grupo4 .size()>0){
 	   for(Alumno alumno : grupo4){%>
   <tr>
@@ -162,7 +171,7 @@ Grupo 4
    <% }
      }else{%>
       <tr>
-    <td colspan="8"><div align="center" class="style1">No existen registros </div></td>
+    <td colspan="8"><div align="center">No existen registros </div></td>
   </tr>
     <% }	  
    %>
@@ -172,17 +181,19 @@ Grupo 4
 
 <% List<Alumno> grupo5 = (List<Alumno>)request.getAttribute("grupo5"); %>
 <table width="200" border="1" id="myTable" class="tablesorter">
-Grupo 5
+Viernes
+<thead>
   <tr>
-    <td>Codigo</td>
-    <td>Nombre</td>
-    <td>Apellido Paterno</td>
-    <td>Apellido Materno</td>
-     <td>Creditos Aprobados</td>
-      <td>Promedio</td>
-      <td>Cursos</td>
-      <td>Seccion</td>
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+     <th>Creditos Aprobados</th>
+      <th>Promedio</th>
+      <th>Cursos</th>
+      <th>Seccion</th>
   </tr>
+  </thead>
   <% if(grupo5 !=null && grupo5 .size()>0){
 	   for(Alumno alumno : grupo5){%>
   <tr>
@@ -198,7 +209,7 @@ Grupo 5
    <% }
      }else{%>
       <tr>
-    <td colspan="8"><div align="center" class="style1">No existen registros </div></td>
+    <td colspan="8"><div align="center">No existen registros </div></td>
   </tr>
     <% }	  
    %>
