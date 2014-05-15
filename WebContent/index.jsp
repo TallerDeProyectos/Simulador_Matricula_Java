@@ -6,9 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="#0099FF">
+<div align="center">
 <form name="nose" action="SimPrueba1" method="get">
-  <input type="submit" name="button" id="button" value="simularr">
+  <input type="submit" name="button" id="button" value="simular">
 </form>
+</div>
 </body>
 </html>

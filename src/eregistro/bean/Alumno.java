@@ -1,8 +1,8 @@
 package eregistro.bean;
 
 public class Alumno {
-	private int ID_Alumno, Ciclo, ID_Curso;
-	private String Nombre, Apellido_Paterno, Apellido_Materno, Nro_Cre_Aprobados;
+	private int ID_Alumno, Ciclo, ID_Seccion;
+	private String Nombre, Apellido_Paterno, Apellido_Materno, Nro_Cre_Aprobados, Desc_Curso;
 	private double Promedio;
 	
 	public int getID_Alumno() {
@@ -47,13 +47,20 @@ public class Alumno {
 	public void setPromedio(double promedio) {
 		Promedio = promedio;
 	}
-	public int getID_Curso() {
-		return ID_Curso;
+	public int getID_Seccion() {
+		return ID_Seccion;
 	}
-	public void setID_Curso(int iD_Curso) {
-		ID_Curso = iD_Curso;
+	public void setID_Seccion(int iD_Seccion) {
+		ID_Seccion = iD_Seccion;
+	}
+	public String getDesc_Curso() {
+		return Desc_Curso;
+	}
+	public void setDesc_Curso(String desc_Curso) {
+		Desc_Curso = desc_Curso;
 	}
 	
+
 	
 	
 }
