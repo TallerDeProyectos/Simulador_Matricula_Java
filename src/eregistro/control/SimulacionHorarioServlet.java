@@ -37,7 +37,7 @@ public class SimulacionHorarioServlet extends HttpServlet {
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb",
-					"root", "root");
+					"laflas", "danclau");
 			String sql="SELECT * FROM t_alumno";
 			Statement st=con.createStatement();
 			ResultSet rs=st.executeQuery(sql);

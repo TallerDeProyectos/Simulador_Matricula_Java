@@ -52,7 +52,7 @@ public class SimulacionPrueba1 extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb",
-					"root", "root");
+					"laflas", "danclau");
 			
 			
 			String sql1="select a.id_alumno, a.nombre,a.apellido_paterno,a.apellido_materno,a.nro_cre_aprobados,b.promedio,c.desc_curso,e.id_seccion from t_alumno a,t_semestrexalumno b,t_cursos c,t_cursoshabiles d,t_curso_seccion e where a.id_alumno=b.id_alumno and a.id_alumno=d.id_alumno and d.id_curso=c.id_curso and c.id_curso=e.id_curso";
