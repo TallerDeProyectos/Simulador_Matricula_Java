@@ -1,0 +1,2 @@
+serviceClass: com.taller.proyectos.app.client.GreetingService
+path: C7599E812318F929AF8FB5C8DFED4C74.gwt.rpc

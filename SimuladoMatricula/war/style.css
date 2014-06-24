@@ -1,0 +1,112 @@
+*{
+	margin:0px 0 0 0px;
+	padding:0;
+}
+
+
+body{
+	font-family:"Myriad Pro";
+	background: url(images/fondo.jpg) top left repeat-x;
+}
+
+/* Hyperlink Styles: */
+
+
+
+
+
+#page{
+	width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+
+#content{
+	/*
+	padding-top:8px;
+	padding-left:238px;
+	padding-right:68px;*/
+	background: #000;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#7B1229;
+}
+
+
+.clear{
+	clear:both;
+	}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.col1{
+	width: 500px;
+	
+}
+.col2{
+	width: 700px;
+	text-align: center;
+	
+}
+.cuadro{
+	display: inline-block;
+	width: 160px;
+	border-right: 1px solid #cbcbcb;
+	text-align: center;
+	margin: 30px 0px 0px 0px;
+}
+/* header */
+#header{
+	height:107px;
+	font-size: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #7B1229;
+}
+
+#footer{
+
+	font-size:12px;
+	background:#7B1229;
+	height:71px;
+	color:#FFF;
+}
+
+
+#pc{
+	text-align: center;
+	font-size: 24px;
+	line-height: 66px;
+}
+
+#footer a,#footer a:visited{
+	color:#cccccc;
+	background-color:#213e4a;
+	display:block;
+	padding:2px 4px;
+	z-index:100;
+	position:relative;
+	
+}
+
+#footer a:hover{
+	text-decoration:none;
+	background-color:#142830;
+}
+
+#footer a.by{
+	float:left;
+
+}
+
+#footer a.up{
+	float:right;
+}
+
+
+#mensaje{
+	padding:15px;
+	margin-top:30px;
+    height: 51px;
+}

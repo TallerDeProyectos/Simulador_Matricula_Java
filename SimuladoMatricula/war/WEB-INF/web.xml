@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.taller.proyectos.app.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/simuladomatricula/greet</url-pattern>
+  </servlet-mapping>
+  
+<!--   Meu -->
+  <servlet>
+    <servlet-name>Matricular</servlet-name>
+    <servlet-class>com.taller.proyectos.app.Matricular</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Matricular</servlet-name>
+    <url-pattern>/matricular</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>json</servlet-name>
+    <servlet-class>com.taller.proyectos.app.JsonAlumno</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>json</servlet-name>
+    <url-pattern>/jsonalumno</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>obtenerprioridad</servlet-name>
+    <servlet-class>com.taller.proyectos.app.ObtenerPrioridad</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>obtenerprioridad</servlet-name>
+    <url-pattern>/ObtenerPrioridad</url-pattern>
+  </servlet-mapping>
+    
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
